@@ -35,7 +35,7 @@
 
   <div class="hero_area">
     <!-- header section strats -->
-    <header class="header_section long_section px-5">
+    <header class="header_section long_section header-fixed px-5" id="header_section">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
           <span>
@@ -68,7 +68,7 @@
             </ul>
           </div>
           <div class="quote_btn-container">
-            <a href="registration_form.html">
+            <a href="#">
               <span>
                 Login
               </span>
@@ -516,14 +516,14 @@
                     <div class="name">
                       <i class="fa fa-quote-left" aria-hidden="true"></i>
                       <h6>
-                         Sophie L.
+                        Sophie L.
                       </h6>
                     </div>
                     <p>
                       "Beautiful furniture and excellent quality!
                       The team helped me pick the perfect pieces for my home.
                       Delivery was fast, and everything arrived in perfect condition."
-                     
+
                     </p>
                   </div>
                 </div>
@@ -696,6 +696,17 @@
   </section>
   <!-- end info_section -->
 
+  <script>
+    window.addEventListener('scroll', function () {
+      let navbar = document.getElementById('header_section');
+      if (!navbar) return;
+      if (window.scrollY > 50) {
+        navbar.classList.add('header-fixed');
+      } else {
+        navbar.classList.remove('header-fixed');
+      }
+    });
+  </script>
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
@@ -705,4 +716,5 @@
   <script src="js/custom.js"></script>
 
 </body>
+
 </html>

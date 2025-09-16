@@ -80,6 +80,16 @@ body {
   padding-top: 30px;
 }
 
+.header-fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff !important; /* Change to your desired color */
+  box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
 .header_section .container-fluid {
   padding-right: 25px;
   padding-left: 25px;
@@ -95,7 +105,34 @@ body {
   color: #272727;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
 }
+
+.custom_nav-container .navbar-nav .nav-item .nav-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #272727;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  transform: translateX(-50%);
+}
+
+.custom_nav-container .navbar-nav .nav-item .nav-link:hover::after,
+.custom_nav-container .navbar-nav .nav-item .nav-link:focus::after {
+  width: 80%;
+  background: #f89646; /* New underline color on hover */
+}
+
+.custom_nav-container .navbar-nav .nav-item .nav-link:hover,
+.custom_nav-container .navbar-nav .nav-item .nav-link:focus {
+  color: #f89646; /* New text color on hover */
+}
+
 
 a,
 a:hover,
