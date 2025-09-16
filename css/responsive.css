@@ -129,6 +129,17 @@
 
 @media (max-width: 480px) {}
 
+@media (max-width: 425px) {
+  .long_section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .furniture_section .layout_padding{
+    padding-top: 20px;
+  }
+}
+
 @media (max-width: 420px) {
   .long_section {
     margin-left: 15px;
